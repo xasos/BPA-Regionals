@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB044D2E1A321B8700CE7187 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB044D2D1A321B8700CE7187 /* main.cpp */; };
+		EBF6705E1A3230A3008A6EA7 /* CPP_335_23_0015_0052.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF6705D1A3230A3008A6EA7 /* CPP_335_23_0015_0052.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		EB044D2A1A321B8700CE7187 /* BPA-Regionals */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BPA-Regionals"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB044D2D1A321B8700CE7187 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EBF6705D1A3230A3008A6EA7 /* CPP_335_23_0015_0052.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CPP_335_23_0015_0052.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		EB044D2C1A321B8700CE7187 /* BPA-Regionals */ = {
 			isa = PBXGroup;
 			children = (
-				EB044D2D1A321B8700CE7187 /* main.cpp */,
+				EBF6705D1A3230A3008A6EA7 /* CPP_335_23_0015_0052.cpp */,
 			);
 			path = "BPA-Regionals";
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB044D2E1A321B8700CE7187 /* main.cpp in Sources */,
+				EBF6705E1A3230A3008A6EA7 /* CPP_335_23_0015_0052.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +232,7 @@
 				EB044D331A321B8700CE7187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,10 +1,5 @@
-//
-//  main.cpp
-//  BPA-Regionals
-//
-//  Created by Niraj  on 12/5/14.
-//  Copyright (c) 2014 Niraj Pant. All rights reserved.
-//
+// Niraj Pant
+// 23-0015-0052
 
 #include <iostream>
 #include <stdio.h>
@@ -24,8 +19,15 @@ int main(int argc, const char * argv[]) {
     
     cout << "Please enter a maximum value of n:\n";
     cin >> nlimit;
+    cout << endl;
+    
+    if (nlimit <= 0) {
+        cout << "Please type in a poitive integer for n." << endl;
+        exit(0);
+    }
     
     double calculatedValue = valueOfLibnizSeries(nlimit);
+    
     
     cout << "The value of n in the Leibniz Series: " << nlimit << endl;
     cout << "The Leibniz series approximation of PI at n is: " << fixed << setprecision(15) << calculatedValue << endl;
@@ -35,13 +37,13 @@ int main(int argc, const char * argv[]) {
     cout << "The difference between PI and the Leibniz Series: " << abs(PI - calculatedValue) << endl;
     cout << endl;
     
-    cout << "The approximation of PI using 22/7: " << approx1 << endl;
-    cout << "The difference between PI and the Leibniz Series: " << abs(calculatedValue - approx1) << endl;
+    cout << "The approximation of PI using 22 / 7: " << approx1 << endl;
+    cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(15) << abs(calculatedValue - approx1) << endl;
     cout << endl;
 
     
-    cout << "The approximation of PI using 355/113: " << approx2 << endl;
-    cout << "The difference between PI and the Leibniz Series: " << abs(calculatedValue - approx2) << endl;
+    cout << "The approximation of PI using 355 / 113: " << approx2 << endl;
+    cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(15) << abs(calculatedValue - approx2) << endl;
     cout << endl;
     
     return 0;
