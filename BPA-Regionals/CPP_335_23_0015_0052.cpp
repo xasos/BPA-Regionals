@@ -2,14 +2,12 @@
 // 23-0015-0052
 
 #include <iostream>
-#include <stdio.h>
 #include <cmath>
 #include <iomanip>
 using namespace std;
 
 double valueOfLeibnizSeries(double);
 double PI = 3.141592653589793;
-
 
 int main(int argc, const char * argv[]) {
     
@@ -23,11 +21,10 @@ int main(int argc, const char * argv[]) {
     
     if (nlimit <= 0) {
         cout << "Please type in a poitive integer for n." << endl;
-        exit(0);
+        return(0);
     }
     
     double calculatedValue = valueOfLeibnizSeries(nlimit);
-    
     
     cout << "The value of n in the Leibniz Series: " << nlimit << endl;
     cout << "The Leibniz series approximation of PI at n is: " << fixed << setprecision(15) << calculatedValue << endl;
@@ -40,7 +37,6 @@ int main(int argc, const char * argv[]) {
     cout << "The approximation of PI using 22 / 7: " << approx1 << endl;
     cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(15) << abs(calculatedValue - approx1) << endl;
     cout << endl;
-
     
     cout << "The approximation of PI using 355 / 113: " << approx2 << endl;
     cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(10) << abs(calculatedValue - approx2) << endl;
