@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
 
     
     cout << "The approximation of PI using 355 / 113: " << approx2 << endl;
-    cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(15) << abs(calculatedValue - approx2) << endl;
+    cout << "The difference between PI and the Leibniz Series: " << fixed << setprecision(10) << abs(calculatedValue - approx2) << endl;
     cout << endl;
     
     return 0;
