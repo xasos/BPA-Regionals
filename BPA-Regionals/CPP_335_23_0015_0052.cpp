@@ -7,7 +7,7 @@
 #include <iomanip>
 using namespace std;
 
-double valueOfLibnizSeries(double);
+double valueOfLeibnizSeries(double);
 double PI = 3.141592653589793;
 
 
@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
         exit(0);
     }
     
-    double calculatedValue = valueOfLibnizSeries(nlimit);
+    double calculatedValue = valueOfLeibnizSeries(nlimit);
     
     
     cout << "The value of n in the Leibniz Series: " << nlimit << endl;
@@ -49,7 +49,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
-double valueOfLibnizSeries(double nlimit) {
+double valueOfLeibnizSeries(double nlimit) {
     double piApprox = 0;
     for (double i=0; i < nlimit; ++i) {
         piApprox += 4 * (pow (-1, i)/((2*i) + 1));
