@@ -8,33 +8,49 @@
 
 #include <iostream>
 #include <stdio.h>
-#include <math.h>
+#include <cmath>
+#include <iomanip>
+using namespace std;
 
-int calcLeibniz(int n) {
-    int piApprox = 0;
-    for (int i=0; i < n; ++i) {
-//        std::cout << "i: " << i << "\n";
-        int power = pow (-1, n);
-        if(i < 5)
-        {
-            printf("power is: %d", power);
-        }
-//        piApprox = piApprox + (power/(2*n +1));
-    }
-    
-    return piApprox;
-}
+double valueOfLibnizSeries(double);
+double PI = 3.141592653589793;
+
 
 int main(int argc, const char * argv[]) {
-    int PI = 3.141592653589793;
-    float approx1 = (22/7);
-    float approx2 = (355/113);
-    int LEIBNIZ_const = 1000000;
-    calcLeibniz(LEIBNIZ_const);
     
-    std::cout << "Hello, World!\n";
-    std::cout << calcLeibniz(LEIBNIZ_const);
+    double nlimit = 0;
+    double approx1 = (22.0/7.0);
+    double approx2 = (355.0/113.0);
+    
+    cout << "Please enter a maximum value of n:\n";
+    cin >> nlimit;
+    
+    double calculatedValue = valueOfLibnizSeries(nlimit);
+    
+    cout << "The value of n in the Leibniz Series: " << nlimit << endl;
+    cout << "The Leibniz series approximation of PI at n is: " << fixed << setprecision(15) << calculatedValue << endl;
+    cout << endl;
+    
+    cout << "The known value of PI to 15 decimal points: " << PI << endl;
+    cout << "The difference between PI and the Leibniz Series: " << abs(PI - calculatedValue) << endl;
+    cout << endl;
+    
+    cout << "The approximation of PI using 22/7: " << approx1 << endl;
+    cout << "The difference between PI and the Leibniz Series: " << abs(calculatedValue - approx1) << endl;
+    cout << endl;
+
+    
+    cout << "The approximation of PI using 355/113: " << approx2 << endl;
+    cout << "The difference between PI and the Leibniz Series: " << abs(calculatedValue - approx2) << endl;
+    cout << endl;
+    
     return 0;
 }
 
-
+double valueOfLibnizSeries(double nlimit) {
+    double piApprox = 0;
+    for (double i=0; i < nlimit; ++i) {
+        piApprox += 4 * (pow (-1, i)/((2*i) + 1));
+    }
+    return piApprox;
+}
