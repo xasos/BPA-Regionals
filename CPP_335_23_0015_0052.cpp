@@ -7,11 +7,11 @@
 using namespace std;
 
 double valueOfLeibnizSeries(double);
-double PI = 3.141592653589793;
 
 int main(int argc, const char * argv[]) {
     
     double nlimit = 0;
+    double PI = 3.141592653589793;
     double approx1 = (22.0/7.0);
     double approx2 = (355.0/113.0);
     
